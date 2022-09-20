@@ -43,14 +43,15 @@
     position: relative;
 }
 
-.aboutText span {
+ .aboutText span {
     color: rgb(88 88 87);
     transition: 0.8s;
 }
 
 .aboutText span:hover {
-    color: #00ffff;
+    color: rgb(0, 255, 255);
 }
+
 
 .skillsetIcons {
     display: flex;

@@ -20,7 +20,7 @@ const About = () => {
 
             <h1 className="aboutTitle" >Hello,<br />I'm <span>Franco</span></h1>
 
-            <p className="aboutText"><>I'm an Argentina-based frontend web developer,<br />focused on&nbsp;
+            <p className="aboutText">I'm an Argentina-based frontend web developer,<br />focused on&nbsp;
               <span>
                 <MovingLetter letter='r'/>
                 <MovingLetter letter='e'/>
@@ -31,7 +31,7 @@ const About = () => {
                 <MovingLetter letter='v'/>
                 <MovingLetter letter='e'/>
               </span> 
-            &nbsp;frameworks.</></p>
+            &nbsp;frameworks.</p>
 
             <div className="skillsetIcons">
               <SiHtml5 size={40} color="#f16528" className="aboutIcons" />
