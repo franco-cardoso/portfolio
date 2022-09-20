@@ -33,8 +33,8 @@ const navbar = () => {
 };
 
 const Container = styled.div`
-  background-color: rgb(11, 11, 11);
-  box-shadow: 1px 1px 10px 10px rgb(20, 20, 20, 0.5);
+  background-color: rgb(2, 3, 3);
+  box-shadow: 1px 1px 10px 10px rgb(2, 3, 3, 0.5);
   display: grid;
   grid-template-rows: 10% 80% 10%;
   width: 100%;

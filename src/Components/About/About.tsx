@@ -21,7 +21,7 @@ const About = () => {
             <h1 className="aboutTitle" >Hello,<br />I'm <span>Franco</span></h1>
 
             <p className="aboutText"><>I'm an Argentina-based frontend web developer,<br />focused on&nbsp;
-              <motion.span style={{color:'#595959'}} whileHover={{color:'#00fff7'}} transition={{duration:0.8}}>
+              <span>
                 <MovingLetter letter='r'/>
                 <MovingLetter letter='e'/>
                 <MovingLetter letter='a'/>
@@ -30,7 +30,7 @@ const About = () => {
                 <MovingLetter letter='i'/>
                 <MovingLetter letter='v'/>
                 <MovingLetter letter='e'/>
-              </motion.span> 
+              </span> 
             &nbsp;frameworks.</></p>
 
             <div className="skillsetIcons">
