@@ -26,8 +26,8 @@ const Main = () => {
       <scrollPosContext.Provider value={{ scrollPos }}>
         <AnimatePresence exitBeforeEnter>
           <Routes key={location.pathname} location={location}>
-            <Route path="/" element={<AboutRoute />} />
-            <Route path="/Contact" element={<ContactRoute />} />
+            <Route path="/portfolio" element={<AboutRoute />} />
+            <Route path="/portfolio/contact" element={<ContactRoute />} />
           </Routes>
         </AnimatePresence>
       </scrollPosContext.Provider>

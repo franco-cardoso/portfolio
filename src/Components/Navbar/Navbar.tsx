@@ -20,10 +20,10 @@ const navbar = () => {
         </div>
         <NavbarButtons
           btns={[
-            { text: "About", path: "/" },
-            { text: "Web Apps Portfolio", path: "/" },
-            { text: "Work", path: "/" },
-            { text: "Contact", path: "/contact" },
+            { text: "About", path: "/portfolio" },
+            { text: "Web Apps Portfolio", path: "/portfolio" },
+            { text: "Work", path: "/portfolio" },
+            { text: "Contact", path: "/portfolio/contact" },
           ]}
         />
         <SocialMedia />
