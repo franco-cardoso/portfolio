@@ -39,7 +39,7 @@ const MobileMenu = () => {
               />
             </div>
 
-            <div>
+            <div className="btnsMobile">
               <SocialMedia />
             </div>
           </motion.div>

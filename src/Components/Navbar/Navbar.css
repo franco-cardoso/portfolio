@@ -23,7 +23,8 @@
 }
 
 .btnsMobile {
-  margin: 10px 0 30px;
+  margin: 10px 0px 30px 10px;
+  width: 200px;
 }
 
 .mobileMenuContainer {
@@ -43,7 +44,8 @@
 .mobileMenu {
   position: fixed;
   top: 0;
-  width: 250px;
+  width: 150px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.72);
+  box-shadow: 0 0 60px 60px rgba(0, 0, 0, 0.72);
 }

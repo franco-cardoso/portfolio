@@ -30,7 +30,7 @@ const Navbar = () => {
                 ]}
               />
             </div>
-
+                
             <SocialMedia />
           </div>
         </motion.div>
