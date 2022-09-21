@@ -3,30 +3,30 @@ import { motion } from "framer-motion";
 
 const MovingLetter = (props: { letter: string }) => {
   const [hover, setHover] = useState(false);
-  const letterMotion = {
-    hover: {
-      y: [0, -80],
-      //color: ['rgb(88 88 87)','rgb(0, 255, 255)']
-    },
-  };
 
   return (
     <motion.div
-       className="movingLetter"
-      /*onMouseEnter={() => {
+      className="movingLetter"
+      onMouseEnter={() => {
         setHover(true);
         setTimeout(() => {
           setHover(false);
         }, 250);
       }}
-      onMouseLeave={() => setHover(false)} */
-      whileHover="hover"
+      //onMouseLeave={() => setHover(false)}
+      //whileHover="hover"
       style={{ display: "inline-block" }}
     >
       <motion.div
-        variants={letterMotion}
+        //variants={letterMotion}
+        animate={{
+          y: hover ? -30 : 0,
+          color: hover
+            ? "rgb(0, 255, 255)"
+            : ["rgb(0, 255, 255)" ,"rgb(88 88 87)"],
+        }}
         transition={{
-          duration: 0.2,
+          duration: 1.4,
           type: "spring",
           stiffness: 350,
         }}
@@ -44,7 +44,7 @@ const MovingLetter = (props: { letter: string }) => {
         {props.letter}
       </motion.div> */}
 
-      {/* <motion.div drag >
+      {/* <motion.div drag style={{color:'#00ffff'}} >
         {props.letter}
       </motion.div> */}
     </motion.div>

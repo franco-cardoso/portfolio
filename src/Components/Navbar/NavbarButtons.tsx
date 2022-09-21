@@ -1,29 +1,28 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-type Props = {
-  btns: { text: string; path: string }[];
-};
+import "./Navbar.css";
 
-const NavbarButtons = (props: Props) => {
-  const { btns } = props;
+type Button = {
+  text:string,
+  path:string,
+}
+
+const NavbarButtons = ({btns}: { btns: Button[] }) => {
 
   return (
-    <Container>
-      {btns.map((btn,index) => (
-        <Link key={index} to={btn.path} style={{ textDecoration: "none", margin: "5px 0" }}>
+    <>
+      {btns.map((btn, index) => (
+        <Link
+          key={index}
+          to={btn.path}
+          style={{ textDecoration: "none", margin: "5px 0" }}
+        >
           <Btn>{btn.text}</Btn>
         </Link>
       ))}
-    </Container>
+    </>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-`;
 
 const Btn = styled.button`
   all: unset;

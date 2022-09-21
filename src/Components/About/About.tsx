@@ -15,13 +15,13 @@ const About = () => {
     <motion.div className="container">
       {/*prettier-ignore*/}
       <div className="textWrapper">
-        <motion.div className="textContainer" style={{ opacity: 1 }} >
+        <motion.div className="textContainer" >
           <motion.div style={{transform: `translate(${scrollContext.scrollPos*1500}px)`, pointerEvents:'auto' }}>
 
             <h1 className="aboutTitle" >Hello,<br />I'm <span>Franco</span></h1>
 
-            <p className="aboutText">I'm an Argentina-based frontend web developer,<br />focused on&nbsp;
-              <span>
+            <p className="aboutText">I'm an Argentina-based frontend <span>web developer,</span><br />focused on&nbsp;
+              <span className="funkySpan">
                 <MovingLetter letter='r'/>
                 <MovingLetter letter='e'/>
                 <MovingLetter letter='a'/>

@@ -1,44 +1,43 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import "./Navbar.css";
+import useWindowSize from "../Utility/useWindowSize";
+import MobileMenu from "./MobileMenu";
 import NavbarButtons from "./NavbarButtons";
 import SocialMedia from "./SocialMedia";
 
-const navbar = () => {
+const Navbar = () => {
+  const { width, height } = useWindowSize();
+
   return (
-    <motion.div style={{ position:'relative' }} initial={{ left:-600 }} animate={{ left:0 }} transition={{ duration:1.2 }}>
-      <Container>
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+    <>
+      {width >= 1024 && (
+        <motion.div
+          style={{ position: "relative" }}
+          initial={{ left: -600 }}
+          animate={{ left: 0 }}
+          transition={{ duration: 1.2 }}
         >
-          something
-        </div>
-        <NavbarButtons
-          btns={[
-            { text: "About", path: "/portfolio" },
-            { text: "Web Apps Portfolio", path: "/portfolio" },
-            { text: "Work", path: "/portfolio" },
-            { text: "Contact", path: "/portfolio/contact" },
-          ]}
-        />
-        <SocialMedia />
-      </Container>
-    </motion.div>
+          <div className="navbarContainer">
+            <div className="somethingContainer">something</div>
+
+            <div className="navbarBtnsContainer">
+              <NavbarButtons
+                btns={[
+                  { text: "About", path: "/portfolio" },
+                  { text: "Web Apps Portfolio", path: "/portfolio" },
+                  { text: "Work", path: "/portfolio" },
+                  { text: "Contact", path: "/portfolio/contact" },
+                ]}
+              />
+            </div>
+
+            <SocialMedia />
+          </div>
+        </motion.div>
+      )}
+      {width < 1024 && <MobileMenu />}
+    </>
   );
 };
 
-const Container = styled.div`
-  background-color: rgb(2, 3, 3);
-  box-shadow: 1px 1px 10px 10px rgb(2, 3, 3, 0.5);
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
-  width: 100%;
-  height: 100%;
-`;
-
-export default navbar;
+export default Navbar;
