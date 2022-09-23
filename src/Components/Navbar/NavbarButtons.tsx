@@ -3,11 +3,12 @@ import styled from "styled-components";
 import "./Navbar.css";
 
 type Button = {
-  text:string,
-  path:string,
-}
+  text: string;
+  path: string;
+};
 
-const NavbarButtons = ({btns}: { btns: Button[] }) => {
+const NavbarButtons = (props: { btns: Button[]; setShowMenu: Function | null }) => {
+  const { btns, setShowMenu } = props;
 
   return (
     <>
@@ -17,7 +18,15 @@ const NavbarButtons = ({btns}: { btns: Button[] }) => {
           to={btn.path}
           style={{ textDecoration: "none", margin: "5px 0" }}
         >
-          <Btn>{btn.text}</Btn>
+          <Btn
+            onClick={() => {
+              if (setShowMenu !== null) {
+                setShowMenu(false);
+              }
+            }}
+          >
+            {btn.text}
+          </Btn>
         </Link>
       ))}
     </>

@@ -4,21 +4,23 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import AboutRoute from "./AboutRoute";
 import ContactRoute from "./ContactRoute";
 import { AnimatePresence, useScroll } from "framer-motion";
+import useWindowSize from "../Components/Utility/useWindowSize";
 
 export const scrollPosContext = createContext();
 
 const Main = () => {
   const location = useLocation();
+  const { width } = useWindowSize();
 
   const mainEl = useRef(null);
   const { scrollYProgress } = useScroll({
-    container: mainEl,
+    container: width >= 780 ? mainEl : null,
   });
   const [scrollPos, setScrollPos] = useState(0);
   useEffect(() => {
-    return scrollYProgress.onChange((latest) => {
-      setScrollPos(latest);
-    });
+      scrollYProgress.onChange((latest) => {
+        setScrollPos(latest);
+      });
   }, []);
 
   return (

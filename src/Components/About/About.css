@@ -55,7 +55,7 @@
 .funkySpan {
   color: rgb(88 88 87);
   transition: 0.5s;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .funkySpan:hover {
@@ -108,6 +108,7 @@
     font-size: 55px;
   }
   .aboutText {
-    font-size: 35px;
+    font-size: 30px;
+    white-space: wrap;
   }
 }

@@ -7,11 +7,10 @@ import { IoClose } from "react-icons/io5";
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
-  console.log(showMenu);
 
   return (
     <div className="mobileMenuContainer">
-      <button className="burgerButton" onClick={() => setShowMenu(!showMenu)}>
+      <button className="burgerButton" aria-label="open side menu" onClick={() => setShowMenu(!showMenu)}>
         <MobileMenuSvg showMenu={showMenu} />
       </button>
 
@@ -36,6 +35,7 @@ const MobileMenu = () => {
                   { text: "Work", path: "/portfolio" },
                   { text: "Contact", path: "/portfolio/contact" },
                 ]}
+                setShowMenu={setShowMenu}
               />
             </div>
 

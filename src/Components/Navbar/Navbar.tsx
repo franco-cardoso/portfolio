@@ -28,6 +28,7 @@ const Navbar = () => {
                   { text: "Work", path: "/portfolio" },
                   { text: "Contact", path: "/portfolio/contact" },
                 ]}
+                setShowMenu={null}
               />
             </div>
                 
