@@ -21,7 +21,7 @@ const About = () => {
         <motion.div className="textContainer" >
           <motion.div style={{ transform: `translate(${scrollContext.scrollPos * 1500}px)`, pointerEvents: 'auto' }}>
 
-            <h1 className="aboutTitle" >Hello,<br />I'm <span>Franco</span></h1>
+            <h1 className="aboutTitle" >Hello,<br />I'm Franco</h1>
 
             {width >= 780 && (<p className="aboutText">I'm a frontend web developer based in Argentina,<br/> focused on&nbsp;
                 <span className="funkySpan">
