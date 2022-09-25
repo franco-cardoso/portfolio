@@ -22,7 +22,7 @@ const MobileMenuSvg = (props: { showMenu: boolean }) => {
             y2="3"
             strokeWidth={2.3}
             stroke="#fff"
-            stroke-linecap="round"
+            strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             exit={{ pathLength: 0 }}
@@ -35,7 +35,7 @@ const MobileMenuSvg = (props: { showMenu: boolean }) => {
             y2="8"
             strokeWidth={2.3}
             stroke="#fff"
-            stroke-linecap="round"
+            strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             exit={{ pathLength: 0 }}
@@ -48,7 +48,7 @@ const MobileMenuSvg = (props: { showMenu: boolean }) => {
             y2="13"
             strokeWidth={2.3}
             stroke="#fff"
-            stroke-linecap="round"
+            strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             exit={{ pathLength: 0 }}

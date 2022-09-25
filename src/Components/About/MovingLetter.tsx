@@ -5,7 +5,7 @@ const MovingLetter = (props: { letter: string }) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <motion.div
+    <motion.span
       className="movingLetter"
       onMouseEnter={() => {
         setHover(true);
@@ -13,12 +13,8 @@ const MovingLetter = (props: { letter: string }) => {
           setHover(false);
         }, 250);
       }}
-      //onMouseLeave={() => setHover(false)}
-      //whileHover="hover"
-      style={{ display: "inline-block" }}
     >
-      <motion.div
-        //variants={letterMotion}
+      <motion.span
         animate={{
           y: hover ? -30 : 0,
           color: hover
@@ -32,7 +28,7 @@ const MovingLetter = (props: { letter: string }) => {
         }}
       >
         {props.letter}
-      </motion.div>
+      </motion.span>
 
       {/* <motion.div
         drag
@@ -47,7 +43,7 @@ const MovingLetter = (props: { letter: string }) => {
       {/* <motion.div drag style={{color:'#00ffff'}} >
         {props.letter}
       </motion.div> */}
-    </motion.div>
+    </motion.span>
   );
 };
 
