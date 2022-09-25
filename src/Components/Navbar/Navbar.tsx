@@ -4,12 +4,12 @@ import useWindowSize from "../Utility/useWindowSize";
 import MobileMenu from "./MobileMenu";
 import NavbarButtons from "./NavbarButtons";
 import SocialMedia from "./SocialMedia";
-import {useContext} from 'react'
-import { LangContext } from "../../App";
+import i18n from "../../i18n/i18n";
+import {useTranslation} from "react-i18next"
 
 const Navbar = () => {
-  const { width, height } = useWindowSize();
-  const language:any = useContext(LangContext)
+  const { width } = useWindowSize();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -22,17 +22,17 @@ const Navbar = () => {
         >
           <div className="navbarContainer">
             <div className="somethingContainer">
-              <button onClick={() => language.setLang('english')}>en</button>
-              <button onClick={() => language.setLang('spanish')}>es</button>
+              <button onClick={() => i18n.changeLanguage("en")}>en</button>
+              <button onClick={() => i18n.changeLanguage("es")}>es</button>
             </div>
 
             <div className="navbarBtnsContainer">
               <NavbarButtons
                 btns={[
-                  { text: language.lang === 'english' ? "About" : 'Inicio', path: "/portfolio" },
-                  { text: language.lang === 'english' ? "Web Apps" : 'Web Apps', path: "/portfolio" },
-                  { text: language.lang === 'english' ? "Work" : 'Trabajo', path: "/portfolio" },
-                  { text: language.lang === 'english' ? "Contact" : 'Contacto', path: "/portfolio/contact" },
+                  { text: t("navbar.home"), path: "/portfolio" },
+                  { text: t("navbar.webapps"), path: "/portfolio" },
+                  { text: t("navbar.work"), path: "/portfolio" },
+                  { text: t("navbar.contact"), path: "/portfolio/contact" },
                 ]}
                 setShowMenu={null}
               />
