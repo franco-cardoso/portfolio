@@ -5,7 +5,6 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-
         "about.hello": "Hello,",
         "about.im.franco": "I'm Franco",
         "about.im.frontend.webdev":
@@ -22,7 +21,6 @@ i18n.use(initReactI18next).init({
     },
     es: {
       translation: {
-
         "about.hello": "Hola,",
         "about.im.franco": "soy Franco",
         "about.im.frontend.webdev":
@@ -38,7 +36,7 @@ i18n.use(initReactI18next).init({
       },
     },
   },
-  lng: "en",
+  lng: navigator.language,
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

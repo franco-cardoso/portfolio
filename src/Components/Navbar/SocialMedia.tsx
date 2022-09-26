@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import useWindowSize from "../Utility/useWindowSize";
 
 const SocialMedia = () => {
   return (

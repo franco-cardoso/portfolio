@@ -1,18 +1,21 @@
 import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useWindowSize from "./useWindowSize";
 
-export default function (ref: React.RefObject<HTMLElement>) {
-    const {width} = useWindowSize()
-  const { scrollYProgress } = useScroll({
-    //container: width >= 780 ? ref : undefined,
-    container: ref,
-  });
+export default function useScrollPos (ref: React.RefObject<HTMLElement>, force: boolean) {
+  const { width } = useWindowSize();
   const [scrollPos, setScrollPos] = useState(0);
-  useEffect(() => {
-    scrollYProgress.onChange((latest) => {
-      setScrollPos(latest);
-    });
-  }, []);
+  const { scrollYProgress } = useScroll(
+    force
+      ? {
+          container: ref,
+        }
+      : {
+          container: width >= 780 ? ref : undefined,
+        }
+  );
+  scrollYProgress.onChange((latest) => {
+    setScrollPos(latest);
+  });
   return scrollPos;
 }

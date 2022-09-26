@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const MovingLetter = (props: { letter: string }) => {
   const [hover, setHover] = useState(false);
-
+  
   return (
     <motion.span
       className="movingLetter"
@@ -19,7 +19,7 @@ const MovingLetter = (props: { letter: string }) => {
           y: hover ? -30 : 0,
           color: hover
             ? "rgb(0, 255, 255)"
-            : ["rgb(0, 255, 255)", "rgb(88 88 87)"],
+            : ["rgb(0, 255, 255)", "rgb(88, 88, 87)"],
         }}
         transition={{
           duration: 1.4,

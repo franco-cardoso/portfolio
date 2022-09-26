@@ -6,13 +6,13 @@ import { useRef } from "react";
 import useWindowSize from "../Utility/useWindowSize";
 import Info from "./Info";
 import useScrollPos from "../Utility/useScrollPos";
-import MovingLettersWord from "./MovingLettersWord";
 import { useTranslation } from "react-i18next";
+import MovingLetter from "./MovingLetter";
 
 const About = () => {
   const { width } = useWindowSize();
   const containerRef = useRef(null);
-  const scrollPos = useScrollPos(containerRef);
+  const scrollPos = useScrollPos(containerRef, false);
   const { t } = useTranslation();
 
   return (
@@ -22,28 +22,27 @@ const About = () => {
           <motion.div
             style={{
               transform: `translate(${scrollPos * 1500}px)`,
-              pointerEvents: "auto",
             }}
           >
-                <h1 className="aboutTitle">
-                  {t("about.hello")}
-                  <br />
-                  {t("about.im.franco")}
-                </h1>
-                <p className="aboutText">
-                  <span>
-                    {t("about.im.frontend.webdev")}
-                    <br /> {t("about.focused.on")}&nbsp;
-                  </span>
-                  <span className="movingLtrsSpan">
-                    {width < 780 ? (
-                      <span className="funkySpan">{t("about.reactive")}</span>
-                    ) : (
-                      <MovingLettersWord word={t("about.reactive")} />
-                    )}
-                  </span>
-                  <span>&nbsp;{t("about.frameworks")}</span>
-                </p>
+            <h1 className="aboutTitle">
+              {t("about.hello")}
+              <br />
+              {t("about.im.franco")}
+            </h1>
+            <p className="aboutText">
+              <span>
+                {t("about.im.frontend.webdev")}
+                <br /> {t("about.focused.on")}&nbsp;
+              </span>
+              <span className="movingLtrsSpan">
+                {width < 780 ? (
+                  <span className="funkySpan">{t("about.reactive")}</span>
+                ) : (
+                  createMovingWord(t("about.reactive"))
+                )}
+              </span>
+              <span>&nbsp;{t("about.frameworks")}</span>
+            </p>
 
             <div className="skillsetIcons">
               <SiHtml5 size={40} color="#f16528" className="aboutIcons" />
@@ -62,6 +61,17 @@ const About = () => {
 
       <Info />
     </motion.div>
+  );
+};
+
+const createMovingWord = (word: string) => {
+  const wordSplit = word.split("");
+  return (
+    <span className="funkySpan">
+      {wordSplit.map((l, index) => (
+        <MovingLetter letter={l} key={index} />
+      ))}
+    </span>
   );
 };
 
