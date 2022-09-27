@@ -20,9 +20,7 @@ const About = () => {
       <div className="textWrapper">
         <motion.div className="textContainer">
           <motion.div
-            style={{
-              transform: `translate(${scrollPos * 1500}px)`,
-            }}
+            animate={{ x: width >= 780 ? scrollPos * 1500 : 0 }}
           >
             <h1 className="aboutTitle">
               {t("about.hello")}
@@ -49,11 +47,7 @@ const About = () => {
               <SiCss3 size={40} color="#0096d1" className="aboutIcons" />
               <SiJavascript size={40} color="#ceb200" className="aboutIcons" />
               <SiTypescript size={40} color="#0096d1" className="aboutIcons" />
-              <FaReact
-                size={40}
-                color="rgb(93, 221, 255)"
-                className="aboutIcons"
-              />
+              <FaReact size={40} color="#5dddff" className="aboutIcons" />
             </div>
           </motion.div>
         </motion.div>

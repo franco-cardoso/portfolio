@@ -52,7 +52,8 @@
   position: relative;
 }
 
-.movingLtrsSpan, .movingLtrsSpan span {
+.movingLtrsSpan,
+.movingLtrsSpan span {
   white-space: nowrap;
   display: inline-block;
 }
@@ -118,7 +119,7 @@
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .infoTextWrapper {
     justify-content: center;
   }

@@ -6,6 +6,7 @@ import NavbarButtons from "./NavbarButtons";
 import SocialMedia from "./SocialMedia";
 import i18n from "../../i18n/i18n";
 import {useTranslation} from "react-i18next"
+import { Btn } from "./NavbarButtons";
 
 const Navbar = () => {
   const { width } = useWindowSize();
@@ -22,8 +23,8 @@ const Navbar = () => {
         >
           <div className="navbarContainer">
             <div className="somethingContainer">
-              <button onClick={() => i18n.changeLanguage("en")}>en</button>
-              <button onClick={() => i18n.changeLanguage("es")}>es</button>
+              <Btn onClick={() => i18n.changeLanguage("en")}>en</Btn>
+              <Btn onClick={() => i18n.changeLanguage("es")}>es</Btn>
             </div>
 
             <div className="navbarBtnsContainer">

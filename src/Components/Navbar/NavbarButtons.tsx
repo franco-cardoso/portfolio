@@ -7,40 +7,43 @@ type Button = {
   path: string;
 };
 
-const NavbarButtons = (props: { btns: Button[]; setShowMenu: Function | null }) => {
+const NavbarButtons = (props: {
+  btns: Button[];
+  setShowMenu: Function | null;
+}) => {
   const { btns, setShowMenu } = props;
 
   return (
     <>
       {btns.map((btn, index) => (
-        <Link
-          key={index}
-          to={btn.path}
-          style={{ textDecoration: "none", margin: "5px 0" }}
-        >
-          <Btn
-            onClick={() => {
-              if (setShowMenu !== null) {
-                setShowMenu(false);
-              }
-            }}
+        <div key={index}>
+          <Link
+            to={btn.path}
+            style={{ textDecoration: "none", margin: "5px 0", width: "max-content" }}
           >
-            {btn.text}
-          </Btn>
-        </Link>
+            <Btn
+              onClick={() => {
+                if (setShowMenu !== null) {
+                  setShowMenu(false);
+                }
+              }}
+            >
+              {btn.text}
+            </Btn>
+          </Link>
+        </div>
       ))}
     </>
   );
 };
 
-const Btn = styled.button`
+export const Btn = styled.button`
   all: unset;
   color: #e4e4e4;
-  padding: 5px 0;
-  width: 80%;
+  padding: 5px;
+  cursor: pointer;
   font-family: "Mukta";
   font-size: 18px;
-  //padding: 5px 0;
   transition: 400ms;
   &:hover {
     color: #949494;

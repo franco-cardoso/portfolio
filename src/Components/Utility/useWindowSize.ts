@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Este script retorna el tamaño de la pantalla cada vez que se actualice, útil para conditional render
-// Se usa así:
-// const { width, height } = useWindowSize()
-// Las variables width y height se van a actualizar automaticamente cada vez que cambie el tamaño de la ventana
-
 function getSize() {
   const { innerWidth: width, innerHeight: height } = window;
 
