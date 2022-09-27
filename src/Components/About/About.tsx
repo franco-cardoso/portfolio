@@ -1,5 +1,4 @@
 import "./About.css";
-import { motion } from "framer-motion";
 import { FaReact } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiCss3, SiHtml5 } from "react-icons/si";
 import { useRef } from "react";
@@ -16,12 +15,10 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <motion.div className="container" ref={containerRef}>
+    <div className="container" ref={containerRef}>
       <div className="textWrapper">
-        <motion.div className="textContainer">
-          <motion.div
-            animate={{ x: width >= 780 ? scrollPos * 1500 : 0 }}
-          >
+        <div className="textContainer">
+          <div style={{transform:`translateX(${width >= 780 ? scrollPos * 1500 : 0}px)`}}>
             <h1 className="aboutTitle">
               {t("about.hello")}
               <br />
@@ -49,12 +46,12 @@ const About = () => {
               <SiTypescript size={40} color="#0096d1" className="aboutIcons" />
               <FaReact size={40} color="#5dddff" className="aboutIcons" />
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
       <Info />
-    </motion.div>
+    </div>
   );
 };
 

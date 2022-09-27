@@ -1,9 +1,6 @@
+import { motion } from "framer-motion"
 
-import About from "../Components/About/About";
-import { motion } from "framer-motion";
-
-const AboutRoute = (props:any) => {
-
+const R = (props:any) => {
   return (
     <motion.div
       style={{ position: "relative", height:'100%', width:'100%' }}
@@ -12,9 +9,9 @@ const AboutRoute = (props:any) => {
       exit={{ left: -1000, opacity:0 }}
       transition={{ duration: 0.8 }}
     >
-      <About />
+      {props.component}
     </motion.div>
-  );
-};
+  )
+}
 
-export default AboutRoute;
+export default R

@@ -1,21 +1,19 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import AboutRoute from "./AboutRoute";
-import ContactRoute from "./ContactRoute";
+import About from "../Components/About/About";
+import Contact from "../Components/Contact/Contact";
 import { AnimatePresence } from "framer-motion";
-
-
+import R from "./Route";
 
 const Main = () => {
   const location = useLocation();
 
-
   return (
     <main>
-
-        <AnimatePresence exitBeforeEnter>
+      {/* prettier-ignore */}
+      <AnimatePresence exitBeforeEnter>
           <Routes key={location.pathname} location={location}>
-            <Route path="/portfolio" element={<AboutRoute />} />
-            <Route path="/portfolio/contact" element={<ContactRoute />} />
+            <Route path="/portfolio" element={<R component={<About/>}/>}/>
+            <Route path="/portfolio/contact" element={<R component={<Contact/>}/>}/>
           </Routes>
         </AnimatePresence>
     </main>
