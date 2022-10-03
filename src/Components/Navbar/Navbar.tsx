@@ -31,7 +31,7 @@ const Navbar = () => {
               <NavbarButtons
                 btns={[
                   { text: t("navbar.home"), path: "/portfolio" },
-                  { text: t("navbar.webapps"), path: "/portfolio" },
+                  { text: t("navbar.webapps"), path: "/portfolio/webapps" },
                   { text: t("navbar.work"), path: "/portfolio" },
                   { text: t("navbar.contact"), path: "/portfolio/contact" },
                 ]}

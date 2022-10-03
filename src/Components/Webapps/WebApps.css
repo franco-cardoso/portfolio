@@ -1,0 +1,10 @@
+.appDesc,
+.appTitle {
+  margin: 0 50px 30px;
+  text-align: end;
+  text-shadow: 2px 2px 5px #000;
+}
+.appDesc {
+  color: rgb(187, 184, 184);
+  font-size: 40px;
+}

@@ -40,11 +40,11 @@ const About = () => {
             </p>
 
             <div className="skillsetIcons">
-              <SiHtml5 size={40} color="#f16528" className="aboutIcons" />
-              <SiCss3 size={40} color="#0096d1" className="aboutIcons" />
-              <SiJavascript size={40} color="#ceb200" className="aboutIcons" />
-              <SiTypescript size={40} color="#0096d1" className="aboutIcons" />
-              <FaReact size={40} color="#5dddff" className="aboutIcons" />
+              <SiHtml5 size={40} color="#f16528" className="aboutIcons" aria-label="HTML5 icon" />
+              <SiCss3 size={40} color="#0096d1" className="aboutIcons" aria-label="CSS3 icon" />
+              <SiJavascript size={40} color="#ceb200" className="aboutIcons" aria-label="JavaScript icon" />
+              <SiTypescript size={40} color="#0096d1" className="aboutIcons" aria-label="TypeScript icon" />
+              <FaReact size={40} color="#5dddff" className="aboutIcons" aria-label="React icon" />
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const Info = () => {
         }}
         transition={{ duration: 1, delay: 0.7 }}
       >
-        <AnimatePresence>
+        <AnimatePresence> 
           {infoInView && (
             <motion.div
               className="infoTextAnim"

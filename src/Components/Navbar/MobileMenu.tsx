@@ -31,7 +31,7 @@ const MobileMenu = () => {
               <NavbarButtons
                 btns={[
                   { text: "About", path: "/portfolio" },
-                  { text: "Web Apps Portfolio", path: "/portfolio" },
+                  { text: "Web Apps", path: "/portfolio/webapps" },
                   { text: "Work", path: "/portfolio" },
                   { text: "Contact", path: "/portfolio/contact" },
                 ]}

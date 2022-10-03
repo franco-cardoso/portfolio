@@ -3,6 +3,7 @@ import About from "../Components/About/About";
 import Contact from "../Components/Contact/Contact";
 import { AnimatePresence } from "framer-motion";
 import R from "./Route";
+import WebAppsHub from "../Components/Webapps/WebAppsHub";
 
 const Main = () => {
   const location = useLocation();
@@ -12,8 +13,9 @@ const Main = () => {
       {/* prettier-ignore */}
       <AnimatePresence exitBeforeEnter>
           <Routes key={location.pathname} location={location}>
-            <Route path="/portfolio" element={<R component={<About/>}/>}/>
+            <Route path="/portfolio/" element={<R component={<About/>}/>}/>
             <Route path="/portfolio/contact" element={<R component={<Contact/>}/>}/>
+            <Route path="portfolio/webapps" element={<R component={<WebAppsHub/>}/>}/>
           </Routes>
         </AnimatePresence>
     </main>
