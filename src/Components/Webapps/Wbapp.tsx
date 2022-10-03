@@ -7,16 +7,12 @@ const Wbapp = (props: { img: string; title: string; desc: string }) => {
   const [xPos, setXPOS] = useState(0);
 
   return (
-    <MainContainer
-      img={img}
-      whileHover={{ x: "30px" }}
-      transition={{ duration: 0.5 }}
-      onClick={() => setXPOS(300)}
-      animate={{ x: `${xPos}px` }}
-    >
-      <div>
-        <h1 className="appTitle">{title}</h1>
-        <p className="appDesc">{desc}</p>
+    <MainContainer className="mainContainer" img={img}>
+      <div className="textWrapperWb">
+        <div>
+          <h1 className="appTitle">{title}</h1>
+          <p className="appDesc">{desc}</p>
+        </div>
       </div>
     </MainContainer>
   );
@@ -27,7 +23,7 @@ const MainContainer = styled(motion.div)<{ img: string }>`
   width: 100%;
   background-image: linear-gradient(
       270deg,
-      rgba(0, 0, 0, 1) 9%,
+      rgba(0, 0, 0, 1) 18%,
       rgba(0, 0, 0, 0.35898109243697474) 100%
     ),
     url(${(props) => props.img});
@@ -36,6 +32,12 @@ const MainContainer = styled(motion.div)<{ img: string }>`
   align-items: center;
   justify-content: flex-end;
   border-radius: 3px;
+  transition: 1s;
+  &:hover {
+    translate: 60px;
+    scale: 1.02;
+    backdrop-filter: brightness(150%);
+  }
 `;
 
 export default Wbapp;
