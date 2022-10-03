@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 const Wbapp = (props: { img: string; title: string; desc: string }) => {
   const { img, title, desc } = props;
-  const [xPos, setXPOS] = useState(0);
 
   return (
     <MainContainer className="mainContainer" img={img}>

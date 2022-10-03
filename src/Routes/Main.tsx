@@ -13,9 +13,9 @@ const Main = () => {
       {/* prettier-ignore */}
       <AnimatePresence exitBeforeEnter>
           <Routes key={location.pathname} location={location}>
-            <Route path="/portfolio/" element={<R component={<About/>}/>}/>
-            <Route path="/portfolio/contact" element={<R component={<Contact/>}/>}/>
-            <Route path="portfolio/webapps" element={<R component={<WebAppsHub/>}/>}/>
+            <Route path="/home" element={<R component={<About/>}/>}/>
+            <Route path="/contact" element={<R component={<Contact/>}/>}/>
+            <Route path="/webapps" element={<R component={<WebAppsHub/>}/>}/>
           </Routes>
         </AnimatePresence>
     </main>

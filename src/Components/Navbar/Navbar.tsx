@@ -30,10 +30,10 @@ const Navbar = () => {
             <div className="navbarBtnsContainer">
               <NavbarButtons
                 btns={[
-                  { text: t("navbar.home"), path: "/portfolio" },
-                  { text: t("navbar.webapps"), path: "/portfolio/webapps" },
-                  { text: t("navbar.work"), path: "/portfolio" },
-                  { text: t("navbar.contact"), path: "/portfolio/contact" },
+                  { text: t("navbar.home"), path: "/home" },
+                  { text: t("navbar.webapps"), path: "/webapps" },
+                  { text: t("navbar.work"), path: "/home" },
+                  { text: t("navbar.contact"), path: "/contact" },
                 ]}
                 setShowMenu={null}
               />

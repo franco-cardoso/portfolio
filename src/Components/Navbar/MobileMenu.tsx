@@ -30,10 +30,10 @@ const MobileMenu = () => {
             <div className="navbarBtnsContainer btnsMobile">
               <NavbarButtons
                 btns={[
-                  { text: "About", path: "/portfolio" },
-                  { text: "Web Apps", path: "/portfolio/webapps" },
-                  { text: "Work", path: "/portfolio" },
-                  { text: "Contact", path: "/portfolio/contact" },
+                  { text: "About", path: "/home" },
+                  { text: "Web Apps", path: "/webapps" },
+                  { text: "Work", path: "/home" },
+                  { text: "Contact", path: "/contact" },
                 ]}
                 setShowMenu={setShowMenu}
               />
