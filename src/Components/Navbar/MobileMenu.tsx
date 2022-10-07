@@ -4,9 +4,11 @@ import SocialMedia from "./SocialMedia";
 import MobileMenuSvg from "./MobileMenuSvg";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const {t} = useTranslation()
 
   return (
     <div className="mobileMenuContainer">
@@ -30,10 +32,10 @@ const MobileMenu = () => {
             <div className="navbarBtnsContainer btnsMobile">
               <NavbarButtons
                 btns={[
-                  { text: "About", path: "/home" },
-                  { text: "Web Apps", path: "/webapps" },
-                  { text: "Work", path: "/home" },
-                  { text: "Contact", path: "/contact" },
+                  { text: t("navbar.home"), path: "/home" },
+                  { text: t("navbar.webapps"), path: "/webapps" },
+                  { text: t("navbar.work"), path: "/home" },
+                  { text: t("navbar.contact"), path: "/contact" },
                 ]}
                 setShowMenu={setShowMenu}
               />
