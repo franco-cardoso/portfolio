@@ -8,7 +8,7 @@ body,
   box-sizing: border-box;
 }
 
-h1,p {
+h1, h2, p {
   font-family: Montserrat, sans-serif;
   font-size: 70px;
   margin: 0;

@@ -11,6 +11,7 @@ const WebApps = () => {
         <Wbapp
           img="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/wbappbakery.webp"
           title={t("webapps.titleBakery")}
+          subTitle={t("webapps.subBakery")}
           desc={t("webapps.descBakery")}
         />
       </a>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from "react";
 import NavbarButtons from "./NavbarButtons";
 import SocialMedia from "./SocialMedia";

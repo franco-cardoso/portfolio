@@ -18,8 +18,9 @@ i18n.use(initReactI18next).init({
         "navbar.work": "Work",
         "navbar.contact": "Contact",
 
-        "webapps.titleBakery": '"Premium Bakery" React Project',
-        "webapps.descBakery": "An online bakery store app, made for a group project.",
+        "webapps.titleBakery": 'Premium Bakery',
+        "webapps.subBakery": "React Project",
+        "webapps.descBakery": "An online bakery store app, made with React for a group project.",
       },
     },
     es: {
@@ -37,7 +38,8 @@ i18n.use(initReactI18next).init({
         "navbar.work": "Trabajo",
         "navbar.contact": "Contacto",
         
-        "webapps.titleBakery": 'Proyecto "Premium Bakery" con React',
+        "webapps.titleBakery": 'Premium Bakery',
+        "webapps.subBakery": "Proyecto de React",
         "webapps.descBakery": "Tienda online con temática de panadería, desarrollada para un trabajo grupal.",
       },
     },
