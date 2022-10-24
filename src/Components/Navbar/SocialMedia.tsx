@@ -5,23 +5,27 @@ const SocialMedia = () => {
   return (
     <Container>
       <IconWrapper href="/">
-        <FaGithub color="#e4e4e4" size={20} />
+        <a href="https://github.com/franco-cardoso">
+          <FaGithub color="#e4e4e4" size={20} />
+        </a>
       </IconWrapper>
       <IconWrapper href="/">
-        <FaLinkedinIn color="#e4e4e4" size={20} />
+        <a href="https://www.linkedin.com/in/franco-cardoso-854442241/">
+          <FaLinkedinIn color="#e4e4e4" size={20} />
+        </a>
       </IconWrapper>
     </Container>
   );
 };
 
 const IconWrapper = styled.a`
-    text-decoration: none;
-    margin: 5px;
-`
+  text-decoration: none;
+  margin: 5px;
+`;
 
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 `;
 
 export default SocialMedia;

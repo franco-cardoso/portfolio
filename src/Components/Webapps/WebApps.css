@@ -9,6 +9,7 @@
 }
 .textWrapperWb:hover {
   backdrop-filter: brightness(140%);
+  transform: translateX(-60px);
 }
 .textWrapperWb div {
   display: flex;

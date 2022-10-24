@@ -26,15 +26,15 @@ const MainContainer = styled(motion.div)<{ img: string }>`
       rgba(0, 0, 0, 0.35898109243697474) 100%
     ),
     url(${(props) => props.img});
-  background-size: cover;
+  background-size: 100%;
+  background-position: center; 
   display: flex;
   align-items: center;
   justify-content: flex-end;
   border-radius: 3px;
   transition: 1s;
   &:hover {
-    translate: 60px;
-    scale: 1.02;
+  background-size: 103%;
     backdrop-filter: brightness(150%);
   }
 `;

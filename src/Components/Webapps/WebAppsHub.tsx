@@ -3,11 +3,11 @@ import "./WebApps.css";
 import Wbapp from "./Wbapp";
 
 const WebApps = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation(); 
 
   return (
     <div className="container">
-      <a href="https://franco-cardoso.github.io/react-group-project/#/home">
+      <a href="https://premiumbakery.vercel.app/">
         <Wbapp
           img="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/wbappbakery.webp"
           title={t("webapps.titleBakery")}
