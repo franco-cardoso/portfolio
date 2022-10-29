@@ -27,14 +27,14 @@ const MainContainer = styled(motion.div)<{ img: string }>`
     ),
     url(${(props) => props.img});
   background-size: 100%;
-  background-position: center; 
+  background-position: left; 
   display: flex;
   align-items: center;
   justify-content: flex-end;
   border-radius: 3px;
   transition: 1s;
   &:hover {
-  background-size: 103%;
+    background-size: 105%;
     backdrop-filter: brightness(150%);
   }
 `;
