@@ -11,17 +11,44 @@ const Info = () => {
     return (
         <section className="info">
             <div className="infoWrapper">
-                <div className="infoHeader">
-                    <img className="infoPic" src={pfp} alt="Profile picture" />
-                    <div className="infoTitle">
-                        <h2>Franco Cardoso</h2>
-                        <hr />
-                        <p className="infoSub">Full Stack Web Developer</p>
-                        <p className="infoSubSub">Graduated at Numen Academy</p>
+                <motion.div
+                    animate={{ x: infoInView ? 0 : -600, opacity: infoInView ? 1 : 0 }}
+                    transition={{ duration: 1 }}
+                    className="infoHeader"
+                >
+                    <motion.img
+                        className="infoPic"
+                        src={pfp}
+                        alt="Profile picture"
+                        animate={{ x: infoInView ? 0 : 50, opacity: infoInView ? 1 : 0 }}
+                        transition={{ duration: 1, delay: 0.8 }}
+                    />
+                    <div className="infoHeaderContent">
+                        <motion.h2
+                            animate={{ x: infoInView ? 0 : 80, opacity: infoInView ? 1 : 0 }}
+                            transition={{ duration: 0.7, delay: 1.2 }}
+                        >
+                            Franco Cardoso
+                        </motion.h2>
+                        <motion.hr
+                            animate={{ width: infoInView ? "98%" : 0, opacity: infoInView ? 1 : 0 }}
+                            transition={{ duration: 0.7, delay: 0.7 }}
+                        />
+                        <motion.div
+                            animate={{ x: infoInView ? 0 : 80, opacity: infoInView ? 1 : 0 }}
+                            transition={{ duration: 0.7, delay: 1.4 }}
+                        >
+                            <p className="infoSub">Full Stack Web Developer</p>
+                            <p className="infoSubSub">Graduated at Numen Academy</p>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="infoText">
+                <motion.div
+                    className="infoText"
+                    animate={{ opacity: infoInView ? 1 : 0, x: infoInView ? 0 : -200 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                >
                     <p>
                         Hello, my name is Franco and I am a full stack web developer with a passion for creating
                         beautiful and functional websites and applications. With a strong foundation in both front-end
@@ -32,7 +59,7 @@ const Info = () => {
                         databases and <strong>Node.js</strong> servers.
                     </p>
 
-                    <p>
+                    <p ref={infoRef}>
                         Whether it's building responsive websites, developing scalable web applications, or integrating
                         with APIs, I have the skills to take on a variety of projects, as well as high adaptability when
                         learning new technologies.
@@ -42,11 +69,10 @@ const Info = () => {
                         Graduated at Numen Academy, I recieved a degree in Full Stack Web Development, backed by the
                         Argentine Atlantis University
                     </p>
-                </div>
-
-                <div className="certificate">
-                    <img src={cert} alt="" width="280px" height="190px" />
-                </div>
+                    <div className="certificate">
+                        <img src={cert} alt="" width="280px" height="190px" />
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
