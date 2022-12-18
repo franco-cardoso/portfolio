@@ -69,9 +69,9 @@ const Info = () => {
 
                     <p>
                         Graduated at Numen Academy, I recieved a degree in Full Stack Web Development, backed by the
-                        Argentine Atlantis University
+                        Argentine Atlantis University.
                     </p>
-                    <div className="certificate">
+                    <div className="certificate" ref={infoRef}>
                         <img src={cert} alt="" width="280px" height="190px" />
                     </div>
                 </motion.div>
