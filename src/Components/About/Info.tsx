@@ -10,8 +10,7 @@ const Info = () => {
 
     return (
         <section className="info">
-            <div className="infoWrapper">
-            <div className="animTrigger" ref={infoRef} />
+            <div className="infoWrapper" ref={infoRef}>
                 <motion.div
                     animate={{ x: infoInView ? 0 : -400, opacity: infoInView ? 1 : 0 }}
                     transition={{ duration: 1 }}

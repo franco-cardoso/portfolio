@@ -74,14 +74,6 @@
     display: inline-block;
 }
 
-.animTrigger {
-    top: 60px;
-    /* background-color: red; */
-    height: 20px;
-    width: 100px;
-    position: absolute;
-}
-
 @media (min-width: 520px) {
     .infoHeader {
         justify-content: flex-start;
