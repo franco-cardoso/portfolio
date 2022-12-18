@@ -44,7 +44,7 @@
 }
 
 .aboutText {
-  font-size: 40px;
+  font-size: 38px;
   margin: 20px 0;
   font-family: Montserrat, sans-serif;
   text-align: end;
@@ -118,6 +118,10 @@
 @media (max-width: 1024px) {
   .infoTextWrapper {
     justify-content: center;
+  }
+
+  .aboutText {
+    font-size: 35px;
   }
 
   .infoTextAnim {

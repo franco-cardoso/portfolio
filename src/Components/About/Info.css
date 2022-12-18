@@ -2,6 +2,7 @@
     height: 100vh;
     background: black;
     display: flex;
+    position: relative;
 }
 
 .infoWrapper {
@@ -37,15 +38,12 @@
     margin-left: 10px;
     text-shadow: 1px 1px 1px black;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
-
+/* 
 .infoHeaderContent hr {
     align-self: flex-start;
     text-align: left;
-}
+} */
 
 .infoHeaderContent h2 {
     font-weight: 300;
@@ -74,6 +72,14 @@
     border-radius: 15px;
     background-color: var(--dark-bg);
     display: inline-block;
+}
+
+.animTrigger {
+    top: 60px;
+    /* background-color: red; */
+    height: 20px;
+    width: 100px;
+    position: absolute;
 }
 
 @media (min-width: 520px) {

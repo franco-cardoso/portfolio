@@ -11,8 +11,9 @@ const Info = () => {
     return (
         <section className="info">
             <div className="infoWrapper">
+            <div className="animTrigger" ref={infoRef} />
                 <motion.div
-                    animate={{ x: infoInView ? 0 : -600, opacity: infoInView ? 1 : 0 }}
+                    animate={{ x: infoInView ? 0 : -400, opacity: infoInView ? 1 : 0 }}
                     transition={{ duration: 1 }}
                     className="infoHeader"
                 >
@@ -31,18 +32,19 @@ const Info = () => {
                             Franco Cardoso
                         </motion.h2>
                         <motion.hr
-                            animate={{ width: infoInView ? "98%" : 0, opacity: infoInView ? 1 : 0 }}
-                            transition={{ duration: 0.7, delay: 0.7 }}
+                            animate={{ /* width: infoInView ? "98%" : 0, */ opacity: infoInView ? 1 : 0 }}
+                            transition={{ duration: 0.7, delay: 1.6 }}
                         />
                         <motion.div
                             animate={{ x: infoInView ? 0 : 80, opacity: infoInView ? 1 : 0 }}
                             transition={{ duration: 0.7, delay: 1.4 }}
                         >
-                            <p className="infoSub">Full Stack Web Developer</p>
+                            <p className="infoSub" >Full Stack Web Developer</p>
                             <p className="infoSubSub">Graduated at Numen Academy</p>
                         </motion.div>
                     </div>
                 </motion.div>
+                
 
                 <motion.div
                     className="infoText"
@@ -59,7 +61,7 @@ const Info = () => {
                         databases and <strong>Node.js</strong> servers.
                     </p>
 
-                    <p ref={infoRef}>
+                    <p>
                         Whether it's building responsive websites, developing scalable web applications, or integrating
                         with APIs, I have the skills to take on a variety of projects, as well as high adaptability when
                         learning new technologies.
