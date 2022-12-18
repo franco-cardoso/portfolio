@@ -9,10 +9,10 @@ i18n.use(initReactI18next).init({
         "about.im.franco": "I'm Franco",
         "about.im.frontend.webdev":
           "I'm a full stack web developer based in Argentina.",
-        "about.focused.on": "with proficiency using modern",
+        "about.focused.on": "With proficiency using modern",
         "about.reactive": "front-end",
         "about.frameworks": "frameworks",
-        "about.aswell": " as well as back-end services",
+        "about.aswell": ", as well as back-end services.",
 
         "navbar.home": "Home",
         "navbar.webapps": "Web Apps",
@@ -33,7 +33,7 @@ i18n.use(initReactI18next).init({
         "about.focused.on": "con experiencia usando",
         "about.frameworks": "front-end",
         "about.reactive": "frameworks",
-        "about.aswell": " modernos, y servicios de back-end",
+        "about.aswell": " modernos, como también servicios de back-end.",
 
         "navbar.home": "Inicio",
         "navbar.webapps": "Web Apps",
