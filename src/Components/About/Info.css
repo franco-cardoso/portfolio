@@ -1,5 +1,5 @@
 .info {
-    height: 100vh;
+    min-height: 100vh;
     background: black;
     display: flex;
     position: relative;
@@ -58,6 +58,8 @@
 
 .infoText {
     padding: 20px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .infoText p {

@@ -3,77 +3,83 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import pfp from "./pfp.jpg";
 import cert from "./cert.webp";
 import "./Info.css";
+import { Trans, useTranslation } from "react-i18next";
 
 const Info = () => {
     const infoRef = useRef(null);
     const infoInView = useInView(infoRef);
+    const { t } = useTranslation();
 
     return (
         <section className="info">
             <div className="infoWrapper" ref={infoRef}>
-                <motion.div
-                    animate={{ x: infoInView ? 0 : -400, opacity: infoInView ? 1 : 0 }}
-                    transition={{ duration: 1 }}
-                    className="infoHeader"
-                >
-                    <motion.img
-                        className="infoPic"
-                        src={pfp}
-                        alt="Profile picture"
-                        animate={{ x: infoInView ? 0 : 50, opacity: infoInView ? 1 : 0 }}
-                        transition={{ duration: 1, delay: 0.8 }}
-                    />
-                    <div className="infoHeaderContent">
-                        <motion.h2
-                            animate={{ x: infoInView ? 0 : 80, opacity: infoInView ? 1 : 0 }}
-                            transition={{ duration: 0.7, delay: 1.2 }}
-                        >
-                            Franco Cardoso
-                        </motion.h2>
-                        <motion.hr
-                            animate={{ /* width: infoInView ? "98%" : 0, */ opacity: infoInView ? 1 : 0 }}
-                            transition={{ duration: 0.7, delay: 1.6 }}
-                        />
-                        <motion.div
-                            animate={{ x: infoInView ? 0 : 80, opacity: infoInView ? 1 : 0 }}
-                            transition={{ duration: 0.7, delay: 1.4 }}
-                        >
-                            <p className="infoSub" >Full Stack Web Developer</p>
-                            <p className="infoSubSub">Graduated at Numen Academy</p>
-                        </motion.div>
-                    </div>
-                </motion.div>
-                
+                <AnimatePresence>
+                    {infoInView && (
+                        <>
+                            <motion.div
+                                initial={{ x: -200, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 1 }}
+                                exit={animExit}
+                                className="infoHeader"
+                            >
+                                <motion.img
+                                    className="infoPic"
+                                    src={pfp}
+                                    alt="Profile picture"
+                                    initial={{ x: 50, opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1, delay: 0.8 }}
+                                />
+                                <div className="infoHeaderContent">
+                                    <motion.h2
+                                        initial={{ x: 80, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ duration: 0.7, delay: 1.2 }}
+                                    >
+                                        Franco Cardoso
+                                    </motion.h2>
+                                    <motion.hr
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.7, delay: 1.6 }}
+                                    />
+                                    <motion.div
+                                        initial={{ x: 80, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ duration: 0.7, delay: 1.4 }}
+                                    >
+                                        <p className="infoSub">{t("about.info.fullstack")}</p>
+                                        <p className="infoSubSub">{t("about.info.graduate")}</p>
+                                    </motion.div>
+                                </div>
+                            </motion.div>
 
-                <motion.div
-                    className="infoText"
-                    animate={{ opacity: infoInView ? 1 : 0, x: infoInView ? 0 : -200 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                >
-                    <p>
-                        Hello, my name is Franco and I am a full stack web developer with a passion for creating
-                        beautiful and functional websites and applications. With a strong foundation in both front-end
-                        and back-end development, I am able to bring projects from concept to launch with ease. My
-                        skills include proficiency in languages such as <strong>HTML</strong>, <strong>CSS</strong>,{" "}
-                        <strong>JavaScript</strong>, <strong>SQL</strong>, <strong>Python</strong>, front-end frameworks
-                        like <strong>React</strong>, as well as back-end services such as <strong>MongoDB</strong>{" "}
-                        databases and <strong>Node.js</strong> servers.
-                    </p>
+                            <motion.div
+                                className="infoText"
+                                // animate={{ opacity: infoInView ? 1 : 0, x: infoInView ? 0 : -200 }}
+                                initial={{ x: 30, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 1, delay: 1.8 }}
+                                exit={animExit}
+                            >
+                                <p>
+                                    <Trans
+                                        i18nKey="myKey" // optional -> fallbacks to defaults if not provided
+                                        defaults={t("about.info.p1")} // optional defaultValue
+                                        components={{ b: <b /> }}
+                                    />
+                                </p>
+                                <p>{t("about.info.building")}</p>
+                                <p>{t("about.info.graduated")}</p>
 
-                    <p>
-                        Whether it's building responsive websites, developing scalable web applications, or integrating
-                        with APIs, I have the skills to take on a variety of projects, as well as high adaptability when
-                        learning new technologies.
-                    </p>
-
-                    <p>
-                        Graduated at Numen Academy, I recieved a degree in Full Stack Web Development, backed by the
-                        Argentine Atlantis University.
-                    </p>
-                    <div className="certificate" ref={infoRef}>
-                        <img src={cert} alt="" width="280px" height="190px" />
-                    </div>
-                </motion.div>
+                                <div className="certificate" ref={infoRef}>
+                                    <img src={cert} alt="" width="280px" height="190px" />
+                                </div>
+                            </motion.div>
+                        </>
+                    )}
+                </AnimatePresence>
             </div>
         </section>
     );
@@ -81,14 +87,16 @@ const Info = () => {
 
 export default Info;
 
+const animExit = { opacity: 0 };
+
 {
     /* <motion.div
-  className="infoTextWrapper"
-  initial={{ backdropFilter: "brightness(0.1)" }}
+    className="infoTextWrapper"
+    initial={{ backdropFilter: "brightness(0.1)" }}
   animate={{
     backdropFilter: `brightness(${infoInView ? 1 : 0.1})`,
   }}
-  transition={{ duration: 1, delay: 0.7 }}
+  transition={{ duration: 1, delay: infoInView ? 0.7 : 0}}
 >
   <AnimatePresence> 
     {infoInView && (
@@ -97,7 +105,7 @@ export default Info;
         initial={{ x: -600, filter: "opacity(0)" }}
         animate={{ x: 0, filter: "opacity(1)" }}
         exit={{ x: -600, filter: "opacity(0)" }}
-        transition={{ duration: 1, delay: 0.7 }}
+        transition={{ duration: 1, delay: infoInView ? 0.7 : 0}}
       >
         <div>
           <h1 className="aboutTitle" style={{ textAlign: "start" }}>
