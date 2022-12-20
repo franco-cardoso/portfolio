@@ -102,6 +102,22 @@
   display: block;
 }
 
+@media (max-width: 1024px) {
+    .infoTextWrapper {
+        justify-content: center;
+    }
+    
+    .aboutText {
+        font-size: 35px;
+    }
+
+  .infoTextAnim {
+      margin: 0;
+      width: 100%;
+    }
+}
+
+
 @media (max-width: 480px) {
   .textContainer {
     padding: 0 30px;
@@ -110,22 +126,6 @@
     font-size: 55px;
   }
   .aboutText {
-    font-size: 30px;
-    white-space: wrap;
-  }
-}
-
-@media (max-width: 1024px) {
-  .infoTextWrapper {
-    justify-content: center;
-  }
-
-  .aboutText {
-    font-size: 35px;
-  }
-
-  .infoTextAnim {
-    margin: 0;
-    width: 100%;
+    font-size: 32px;
   }
 }

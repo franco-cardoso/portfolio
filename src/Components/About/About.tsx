@@ -31,9 +31,11 @@ const About = () => {
                             </span>
                             <span className="movingLtrsSpan">
                                 {width < 780 ? (
-                                    <span className="funkySpan">
-                                        {t("about.reactive")} {t("about.frameworks")}
-                                    </span>
+                                    <>
+                                        <span className="funkySpan">
+                                            {t("about.reactive")} {t("about.frameworks")}
+                                        </span>
+                                    </>
                                 ) : (
                                     <>
                                         {createMovingWord(t("about.reactive"))}
