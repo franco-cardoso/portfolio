@@ -1,7 +1,5 @@
 import { useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import pfp from "../../Assets/img/pfp.jpg";
-import cert from "../../Assets/img/cert.webp";
 import "./Info.css";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -25,7 +23,7 @@ const Info = () => {
                             >
                                 <motion.img
                                     className="infoPic"
-                                    src="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/img/pfp.jpg"
+                                    src="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/img/pfp.webp"
                                     alt="Profile picture"
                                     initial={{ x: 50, opacity: 0 }}
                                     animate={{ x: 0, opacity: 1 }}
