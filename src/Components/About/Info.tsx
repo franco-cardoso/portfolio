@@ -25,7 +25,7 @@ const Info = () => {
                             >
                                 <motion.img
                                     className="infoPic"
-                                    src={pfp}
+                                    src="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/img/pfp.jpg"
                                     alt="Profile picture"
                                     initial={{ x: 50, opacity: 0 }}
                                     animate={{ x: 0, opacity: 1 }}
@@ -74,7 +74,12 @@ const Info = () => {
                                 <p>{t("about.info.graduated")}</p>
 
                                 <div className="certificate" ref={infoRef}>
-                                    <img src={cert} alt="" width="280px" height="190px" />
+                                    <img
+                                        src="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/img/cert.webp"
+                                        alt=""
+                                        width="280px"
+                                        height="190px"
+                                    />
                                 </div>
                             </motion.div>
                         </>
