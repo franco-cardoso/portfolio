@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion, AnimatePresence, useInView, Variant, Variants } from "framer-motion";
 import "./Info.css";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -15,38 +15,25 @@ const Info = () => {
                     {infoInView && (
                         <>
                             <motion.div
-                                initial={{ /* x: -200, */ width: 0, opacity: 0 }}
-                                animate={{ /* x: 0, */ width: "", opacity: 1 }}
-                                transition={{ duration: 1 }}
-                                exit={animExit}
                                 className="infoHeader"
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 1 }}
+                                variants={headerVar}
+                                exit={animExit}
                             >
                                 <motion.img
                                     className="infoPic"
                                     src="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/img/pfp.webp"
                                     alt="Profile picture"
-                                    initial={{ x: 50, opacity: 0 }}
-                                    animate={{ x: 0, opacity: 1 }}
-                                    transition={{ duration: 1, delay: 0.8 }}
+                                    variants={pfpVar}
                                 />
                                 <div className="infoHeaderContent">
-                                    <motion.h2
-                                        initial={{ x: 80, opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{ duration: 0.7, delay: 1.2 }}
-                                    >
+                                    <motion.h2 custom={1.2} variants={headerContentVar}>
                                         Franco Cardoso
                                     </motion.h2>
-                                    <motion.hr
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 0.7, delay: 1.6 }}
-                                    />
-                                    <motion.div
-                                        initial={{ x: 80, opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{ duration: 0.7, delay: 1.4 }}
-                                    >
+                                    <motion.hr variants={hrVar} />
+                                    <motion.div custom={1.3} variants={headerContentVar}>
                                         <p className="infoSub">{t("about.info.fullstack")}</p>
                                         <p className="infoSubSub">{t("about.info.graduate")}</p>
                                     </motion.div>
@@ -56,9 +43,9 @@ const Info = () => {
                             <motion.div
                                 className="infoText"
                                 // animate={{ opacity: infoInView ? 1 : 0, x: infoInView ? 0 : -200 }}
-                                initial={{ x: 30, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: 1.8 }}
+                                initial="hidden"
+                                animate="visible"
+                                variants={textVar}
                                 exit={animExit}
                             >
                                 <p>
@@ -92,47 +79,27 @@ export default Info;
 
 const animExit = { opacity: 0 };
 
-{
-    /* <motion.div
-    className="infoTextWrapper"
-    initial={{ backdropFilter: "brightness(0.1)" }}
-  animate={{
-    backdropFilter: `brightness(${infoInView ? 1 : 0.1})`,
-  }}
-  transition={{ duration: 1, delay: infoInView ? 0.7 : 0}}
->
-  <AnimatePresence> 
-    {infoInView && (
-      <motion.div
-        className="infoTextAnim"
-        initial={{ x: -600, filter: "opacity(0)" }}
-        animate={{ x: 0, filter: "opacity(1)" }}
-        exit={{ x: -600, filter: "opacity(0)" }}
-        transition={{ duration: 1, delay: infoInView ? 0.7 : 0}}
-      >
-        <div>
-          <h1 className="aboutTitle" style={{ textAlign: "start" }}>
-            Lorem ipsum dolor sit amet consectetur.
-          </h1>
-          <p
-            className="aboutText"
-            style={{
-              color: "#fff",
-              textAlign: "start",
-              margin: "10px 0",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-            quia, vero molestias accusamus voluptate ipsum dolore numquam
-            reiciendis?
-          </p>
-        </div>
-      </motion.div>
-    )}
-  </AnimatePresence>
-  <div
-    style={{ width: "300px", height: "300px", position: "absolute" }}
-    ref={infoRef}
-  ></div>
-</motion.div> */
-}
+const headerVar: Variants = {
+    hidden: { width: 0, opacity: 0, transition: { duration: 0.1 } },
+    visible: { width: "", opacity: 1, transition: { duration: 1 } },
+};
+
+const pfpVar: Variants = {
+    hidden: { x: 50, opacity: 0, transition: { duration: 1 } },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.8 } },
+};
+
+const headerContentVar: Variants = {
+    hidden: { x: 80, opacity: 0 },
+    visible: (del) => ({ x: 0, opacity: 1, transition: { duration: 0.7, delay: del } }),
+};
+
+const hrVar: Variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.7, delay: 1.6 } },
+};
+
+const textVar: Variants = {
+    hidden: { x: 30, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 1.8 } },
+};
