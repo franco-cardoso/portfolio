@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import pfp from "./pfp.jpg";
-import cert from "./cert.webp";
+import pfp from "../../Assets/img/pfp.jpg";
+import cert from "../../Assets/img/cert.webp";
 import "./Info.css";
 import { Trans, useTranslation } from "react-i18next";
 
