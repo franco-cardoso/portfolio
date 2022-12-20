@@ -17,8 +17,8 @@ const Info = () => {
                     {infoInView && (
                         <>
                             <motion.div
-                                initial={{ x: -200, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
+                                initial={{ /* x: -200, */ width: 0, opacity: 0 }}
+                                animate={{ /* x: 0, */ width: "", opacity: 1 }}
                                 transition={{ duration: 1 }}
                                 exit={animExit}
                                 className="infoHeader"

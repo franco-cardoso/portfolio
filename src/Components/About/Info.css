@@ -28,6 +28,7 @@
     justify-content: center;
     gap: 1rem;
     width: 95%;
+    height: 106px;
     background-color: var(--dark-bg);
     border-radius: 20px;
     padding: 15px;
