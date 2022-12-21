@@ -35,7 +35,6 @@ const Navbar = () => {
                   { text: t("navbar.work"), path: "/home" },
                   { text: t("navbar.contact"), path: "/contact" },
                 ]}
-                setShowMenu={null}
               />
             </div>
                 

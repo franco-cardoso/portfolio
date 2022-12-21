@@ -5,8 +5,9 @@ import { useRef } from "react";
 import useWindowSize from "../Utility/useWindowSize";
 import Info from "./Info";
 import useScrollPos from "../Utility/useScrollPos";
-import { useTranslation } from "react-i18next";
-import MovingLetter from "./MovingLetter";
+import { Trans, useTranslation } from "react-i18next";
+import BouncingLetter from "./BouncingLetter";
+import React from "react";
 
 const About = () => {
     const { width } = useWindowSize();
@@ -32,19 +33,13 @@ const About = () => {
                             <span className="movingLtrsSpan">
                                 {width < 780 ? (
                                     <>
-                                        <span className="funkySpan">
-                                            {t("about.reactive")} {t("about.frameworks")}
-                                        </span>
+                                        <span className="funkySpan">{t("about.reactive")}</span>
                                     </>
                                 ) : (
-                                    <>
-                                        {createMovingWord(t("about.reactive"))}
-                                        &nbsp;
-                                        {createMovingWord(t("about.frameworks"))}
-                                    </>
+                                    <>{bouncingText(t("about.reactive"))}</>
                                 )}
                             </span>
-                            {t("about.aswell")}
+                            <Trans i18nKey="myKey" defaults={t("about.aswell")} components={{ br: <br /> }} />
                         </p>
 
                         <div className="skillsetIcons">
@@ -65,13 +60,21 @@ const About = () => {
     );
 };
 
-const createMovingWord = (word: string) => {
+const bouncingText = (word: string): React.ReactNode => {
     const wordSplit = word.split("");
     return (
         <span className="funkySpan">
-            {wordSplit.map((l, index) => (
-                <MovingLetter letter={l} key={index} />
-            ))}
+            {wordSplit.map((l, index) => {
+                if ([" ", ","].includes(l)) {
+                    return (
+                        <span key={index} className="aboutText" style={{ margin: 0 }}>
+                            {l === " " ? "\u00A0" : l}
+                        </span>
+                    );
+                } else {
+                    return <BouncingLetter letter={l} key={index} />;
+                }
+            })}
         </span>
     );
 };

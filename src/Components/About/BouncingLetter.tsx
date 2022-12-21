@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const MovingLetter = (props: { letter: string }) => {
-    const [hover, setHover]: [any, Function] = useState(null);
+const BouncingLetter = (props: { letter: string }) => {
+    const [hover, setHover] = useState<boolean | null>(null);
 
     return props.letter === "," ? (
         <span className="aboutText" style={{ margin: 0 }}>
@@ -53,4 +53,4 @@ const MovingLetter = (props: { letter: string }) => {
     );
 };
 
-export default MovingLetter;
+export default BouncingLetter;
