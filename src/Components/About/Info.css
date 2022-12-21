@@ -40,11 +40,6 @@
     text-shadow: 1px 1px 1px black;
     width: 100%;
 }
-/* 
-.infoHeaderContent hr {
-    align-self: flex-start;
-    text-align: left;
-} */
 
 .infoHeaderContent h2 {
     font-weight: 300;

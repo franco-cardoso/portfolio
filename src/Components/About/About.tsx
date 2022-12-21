@@ -16,7 +16,7 @@ const About = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="container" ref={containerRef}>
+        <section className="about" ref={containerRef}>
             <div className="textWrapper">
                 <div className="textContainer">
                     <div style={{ transform: `translateX(${width >= 780 ? scrollPos * 1500 : 0}px)` }}>
@@ -32,9 +32,7 @@ const About = () => {
                             </span>
                             <span className="movingLtrsSpan">
                                 {width < 780 ? (
-                                    <>
-                                        <span className="funkySpan">{t("about.reactive")}</span>
-                                    </>
+                                    <span className="funkySpan">{t("about.reactive")}</span>
                                 ) : (
                                     <>{bouncingText(t("about.reactive"))}</>
                                 )}
@@ -56,7 +54,7 @@ const About = () => {
             </div>
 
             <Info />
-        </div>
+        </section>
     );
 };
 
