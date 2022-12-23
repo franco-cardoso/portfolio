@@ -1,5 +1,7 @@
 {
     "translation": {
+        "notif.clipboard": "Copied to clipboard!",
+
         "about.hello": "Hello,",
         "about.im.franco": "I'm Franco",
         "about.im.frontend.webdev": "I'm a full stack web developer based in Argentina.",

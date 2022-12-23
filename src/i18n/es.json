@@ -1,5 +1,7 @@
 {
     "translation": {
+        "notif.clipboard": "Copiado al portapapeles!",
+
         "about.hello": "Hola,",
         "about.im.franco": "soy Franco",
         "about.im.frontend.webdev": "Soy un desarrollador web full stack basado en Argentina.",
