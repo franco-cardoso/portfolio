@@ -20,6 +20,10 @@
 
         "webapps.titleBakery": "Premium Bakery",
         "webapps.subBakery": "React Project",
-        "webapps.descBakery": "An online bakery store app, made with React for a group project."
+        "webapps.descBakery": "An online bakery store app, made with React for a group project.",
+
+        "contact.contact": "Contact me",
+        "contact.email": "Email me",
+        "contact.phone": "Call me"
     }
 }

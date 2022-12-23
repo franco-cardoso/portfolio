@@ -9,7 +9,7 @@ type PropTypes = {
 
 const ContactCard = (props: PropTypes) => {
     return (
-        <div className="contactCard">
+        <div className="contactCard" onClick={() => navigator.clipboard.writeText(props.subtitle)}>
             {props.icon}
             <h3>{props.title}</h3>
             <p>{props.subtitle}</p>
