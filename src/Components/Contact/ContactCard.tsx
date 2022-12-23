@@ -18,7 +18,7 @@ const ContactCard = (props: PropTypes) => {
             className="contactCard"
             onClick={() => {
                 navigator.clipboard.writeText(props.subtitle);
-                gContext.setNotif(t("notif.clipboard"));
+                gContext.sendNotif(t("notif.clipboard"));
             }}
         >
             {props.icon}

@@ -2,10 +2,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import "./notification.css";
 
-const Notification = ({ text, setNotif }: { text: string; setNotif: Function }) => {
+const Notification = ({ text, sendNotif }: { text: string; sendNotif: Function }) => {
     useEffect(() => {
+        if (!text) return;
         setTimeout(() => {
-            setNotif("");
+            sendNotif("");
         }, 2000);
     }, [text]);
 

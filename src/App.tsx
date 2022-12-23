@@ -2,17 +2,24 @@ import { useState, createContext } from "react";
 import "./App.css";
 import Notification from "./Components/Misc/Notification";
 import Navbar from "./Components/Navbar/Navbar";
+import { TGlobalContext } from "./Components/Utility/types";
 import Main from "./Routes/Main";
-export const GlobalContext = createContext<any>(undefined);
+
+const defaultValue = {
+    sendNotif: () => {
+        throw new Error("Global Context is set to default");
+    },
+};
+export const GlobalContext = createContext<TGlobalContext>(defaultValue);
 
 function App() {
-    const [notif, setNotif] = useState<string>("");
+    const [notif, sendNotif] = useState<string>("");
 
     return (
-        <GlobalContext.Provider value={{ setNotif: setNotif }}>
+        <GlobalContext.Provider value={{ sendNotif: sendNotif }}>
             <Navbar />
             <Main />
-            <Notification text={notif} setNotif={setNotif} />
+            <Notification text={notif} sendNotif={sendNotif} />
         </GlobalContext.Provider>
     );
 }
