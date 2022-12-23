@@ -38,7 +38,6 @@ const MobileMenu = () => {
                                 btns={[
                                     { text: t("navbar.home"), path: "/home" },
                                     { text: t("navbar.webapps"), path: "/webapps" },
-                                    { text: t("navbar.work"), path: "/home" },
                                     { text: t("navbar.contact"), path: "/contact" },
                                 ]}
                                 setShowMenu={setShowMenu}

@@ -16,7 +16,7 @@ function App() {
     const [notif, sendNotif] = useState<string>("");
 
     return (
-        <GlobalContext.Provider value={{ sendNotif: sendNotif }}>
+        <GlobalContext.Provider value={{ sendNotif }}>
             <Navbar />
             <Main />
             <Notification text={notif} sendNotif={sendNotif} />
