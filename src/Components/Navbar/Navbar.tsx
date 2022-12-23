@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       {width >= 1024 && (
-        <motion.div
+        <motion.nav
           style={{ position: "relative" }}
           initial={{ left: -600 }}
           animate={{ left: 0 }}
@@ -40,7 +40,7 @@ const Navbar = () => {
                 
             <SocialMedia />
           </div>
-        </motion.div>
+        </motion.nav>
       )}
       {width < 1024 && <MobileMenu />}
     </>
