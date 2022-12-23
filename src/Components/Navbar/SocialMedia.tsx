@@ -5,12 +5,12 @@ const SocialMedia = () => {
   return (
     <Container>
       <IconWrapper href="/">
-        <a href="https://github.com/franco-cardoso">
+        <a href="https://github.com/franco-cardoso" rel="noreferrer" target={"_blank"}>
           <FaGithub color="#e4e4e4" size={20} />
         </a>
       </IconWrapper>
       <IconWrapper href="/">
-        <a href="https://www.linkedin.com/in/franco-cardoso-854442241/">
+        <a href="https://www.linkedin.com/in/franco-cardoso-854442241/" rel="noreferrer" target={"_blank"}>
           <FaLinkedinIn color="#e4e4e4" size={20} />
         </a>
       </IconWrapper>
