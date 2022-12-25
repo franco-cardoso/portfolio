@@ -19,7 +19,7 @@ function App() {
         <GlobalContext.Provider value={{ sendNotif }}>
             <Navbar />
             <Main />
-            <Notification text={notif} sendNotif={sendNotif} />
+            <Notification notif={notif} sendNotif={sendNotif} />
         </GlobalContext.Provider>
     );
 }

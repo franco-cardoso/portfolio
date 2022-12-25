@@ -2,19 +2,19 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import "./notification.css";
 
-const Notification = ({ text, sendNotif }: { text: string; sendNotif: Function }) => {
+const Notification = ({ notif, sendNotif }: { notif: string; sendNotif: Function }) => {
     useEffect(() => {
-        if (!text) return;
+        if (!notif) return;
         setTimeout(() => {
             sendNotif("");
         }, 2000);
-    }, [text]);
+    }, [notif]);
 
     return (
         <AnimatePresence>
-            {text && (
+            {notif && (
                 <motion.div exit={{ y: -80 }} initial={{ y: -80 }} animate={{ y: 0 }} className="notif">
-                    <div>{text}</div>
+                    <div>{notif}</div>
                 </motion.div>
             )}
         </AnimatePresence>

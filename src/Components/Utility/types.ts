@@ -1,3 +1,3 @@
 export type TGlobalContext = {
-    sendNotif: Function;
+    sendNotif: (notif: string) => void;
 };
