@@ -1,6 +1,5 @@
 .info {
     min-height: 100vh;
-    background: black;
     display: flex;
     position: relative;
 }
