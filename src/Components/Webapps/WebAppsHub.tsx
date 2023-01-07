@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./WebApps.css";
 import Wbapp from "./Wbapp";
 
-const WebApps = () => {
+const WebAppsHub = () => {
   const { t } = useTranslation(); 
 
   return (
@@ -19,4 +19,4 @@ const WebApps = () => {
   );
 };
 
-export default WebApps;
+export default WebAppsHub;
