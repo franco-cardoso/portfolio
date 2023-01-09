@@ -23,6 +23,9 @@
         "webapps.titleBakery": "Premium Bakery",
         "webapps.subBakery": "Proyecto de React/Node",
         "webapps.descBakery": "Tienda online con temática de panadería, desarrollada para un trabajo grupal.",
+        "webapps.titlePractice": "Práctica React",
+        "webapps.subPractice": "Proyecto de React",
+        "webapps.descPractice": "Una colección de componentes front-end",
 
         "contact.contact": "Contáctame",
         "contact.email": "Envía un correo",

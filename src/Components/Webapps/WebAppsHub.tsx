@@ -18,9 +18,9 @@ const WebApps = () => {
             <a href="https://franco-cardoso.github.io/react-training/" target={"_blank"} rel="noreferrer">
                 <Wbapp
                     img="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-gray-solid-color-background.jpg"
-                    title={"Practice"}
-                    subTitle={"React Project"}
-                    desc={"A collection of web components made for practicing."}
+                    title={t("webapps.titlePractice")}
+                    subTitle={t("webapps.subPractice")}
+                    desc={t("webapps.descPractice")}
                 />
             </a>
         </div>

@@ -23,6 +23,9 @@
         "webapps.titleBakery": "Premium Bakery",
         "webapps.subBakery": "React/Node Project",
         "webapps.descBakery": "An online bakery store app, made with React for a group project.",
+        "webapps.titlePractice": "React Practice",
+        "webapps.subPractice": "React Project",
+        "webapps.descPractice": "A collection of front-end components",
 
         "contact.contact": "Contact me",
         "contact.email": "Email me",
