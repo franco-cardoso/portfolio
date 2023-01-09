@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import "./WebApps.css";
 import Wbapp from "./Wbapp";
 
-const WebApps = () => {
-    const { t } = useTranslation();
+const WebAppsHub = () => {
+  const { t } = useTranslation(); 
 
     return (
         <div className="container">
@@ -27,4 +27,4 @@ const WebApps = () => {
     );
 };
 
-export default WebApps;
+export default WebAppsHub;
