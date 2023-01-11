@@ -22,6 +22,6 @@ function App() {
             <Notification notif={notif} sendNotif={sendNotif} />
         </GlobalContext.Provider>
     );
-}
+} 
 
 export default App;
