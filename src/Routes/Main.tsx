@@ -13,7 +13,7 @@ const Main = () => {
       {/* prettier-ignore */}
       <AnimatePresence exitBeforeEnter>
           <Routes key={location.pathname} location={location}>
-            <Route path="/home" element={<R component={<About/>}/>}/>
+            <Route path="/" element={<R component={<About/>}/>}/>
             <Route path="/contact" element={<R component={<Contact/>}/>}/>
             <Route path="/webapps" element={<R component={<WebAppsHub/>}/>}/>
           </Routes>
