@@ -8,7 +8,7 @@ const Notification = ({ notif, sendNotif }: { notif: string; sendNotif: Function
         setTimeout(() => {
             sendNotif("");
         }, 2000);
-    }, [notif]);
+    }, [notif, sendNotif]);
 
     return (
         <AnimatePresence>
