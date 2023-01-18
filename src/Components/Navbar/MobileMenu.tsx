@@ -36,7 +36,7 @@ const MobileMenu = () => {
                         <div className="navbarBtnsContainer btnsMobile">
                             <NavbarButtons
                                 btns={[
-                                    { text: t("navbar.home"), path: "/home" },
+                                    { text: t("navbar.home"), path: "/" },
                                     { text: t("navbar.webapps"), path: "/webapps" },
                                     { text: t("navbar.contact"), path: "/contact" },
                                 ]}
