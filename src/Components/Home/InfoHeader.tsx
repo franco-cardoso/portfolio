@@ -25,8 +25,8 @@ const InfoHeader = () => {
                 </motion.h2>
                 <motion.hr variants={hrVar} />
                 <motion.div custom={1.3} variants={headerContentVar}>
-                    <p className="infoSub">{t("about.info.fullstack")}</p>
-                    <p className="infoSubSub">{t("about.info.graduate")}</p>
+                    <p className="infoSub">{t("home.info.fullstack")}</p>
+                    <p className="infoSubSub">{t("home.info.graduate")}</p>
                 </motion.div>
             </div>
         </motion.div>

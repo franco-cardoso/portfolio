@@ -23,10 +23,10 @@ const Info = () => {
                                 exit={{ opacity: 0 }}
                             >
                                 <p>
-                                    <Trans i18nKey="myKey" defaults={t("about.info.p1")} components={{ b: <b /> }} />
+                                    <Trans i18nKey="myKey" defaults={t("home.info.p1")} components={{ b: <b /> }} />
                                 </p>
-                                <p>{t("about.info.building")}</p>
-                                <p>{t("about.info.graduated")}</p>
+                                <p>{t("home.info.building")}</p>
+                                <p>{t("home.info.graduated")}</p>
 
                                 <div className="certificate" ref={infoRef}>
                                     <img
