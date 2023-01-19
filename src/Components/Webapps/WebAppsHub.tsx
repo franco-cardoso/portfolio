@@ -6,7 +6,7 @@ const WebAppsHub = () => {
   const { t } = useTranslation(); 
 
     return (
-        <div className="container">
+        <section>
             <a href="https://premiumbakery.vercel.app/" target={"_blank"} rel="noreferrer">
                 <Wbapp
                     img="https://raw.githubusercontent.com/franco-cardoso/portfolio/main/src/Assets/img/wbappbakery.webp"
@@ -23,7 +23,7 @@ const WebAppsHub = () => {
                     desc={t("webapps.descPractice")}
                 />
             </a>
-        </div>
+        </section>
     );
 };
 
