@@ -9,14 +9,15 @@ import { Trans, useTranslation } from "react-i18next";
 import BouncingLetter from "./BouncingLetter";
 import React from "react";
 
-const About = () => {
+const About = ({ scrollPos }: { scrollPos: number }) => {
     const { width } = useWindowSize();
-    const containerRef = useRef(null);
-    const scrollPos = useScrollPos(containerRef, false);
+    // const containerRef = useRef(null);
+    // const scrollPos = useScrollPos(containerRef, false);
     const { t } = useTranslation();
+    console.log(scrollPos)
 
     return (
-        <section className="about" ref={containerRef}>
+        <section className="about">
             <div className="textWrapper">
                 <div className="textContainer">
                     <div style={{ transform: `translateX(${width >= 780 ? scrollPos * 1500 : 0}px)` }}>
@@ -52,8 +53,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
-
-            <Info />
+            <section className="info">
+                <Info />
+            </section>
         </section>
     );
 };

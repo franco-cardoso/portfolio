@@ -10,7 +10,6 @@ const Info = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="info">
             <div className="infoWrapper" ref={infoRef}>
                 <AnimatePresence>
                     {infoInView && (
@@ -42,7 +41,6 @@ const Info = () => {
                     )}
                 </AnimatePresence>
             </div>
-        </section>
     );
 };
 

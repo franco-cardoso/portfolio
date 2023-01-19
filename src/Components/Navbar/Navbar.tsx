@@ -16,9 +16,8 @@ const Navbar = () => {
     <>
       {width >= 1024 && (
         <motion.nav
-          style={{ position: "relative" }}
-          initial={{ left: -600 }}
-          animate={{ left: 0 }}
+          initial={{ x: -600 }}
+          animate={{ x: 0 }}
           transition={{ duration: 1.2 }}
         >
           <div className="navbarContainer">
