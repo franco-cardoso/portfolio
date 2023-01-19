@@ -1,4 +1,4 @@
-import "./About.css";
+import "./home.css";
 import { FaReact } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiCss3, SiHtml5 } from "react-icons/si";
 import useWindowSize from "../Utility/useWindowSize";
@@ -7,44 +7,44 @@ import { Trans, useTranslation } from "react-i18next";
 import BouncingLetter from "./BouncingLetter";
 import React from "react";
 
-const About = ({ scrollPos }: { scrollPos: number }) => {
+const Home = ({ scrollPos }: { scrollPos: number }) => {
     const { width } = useWindowSize();
     const { t } = useTranslation();
 
     return (
         <>
-            <section className="about">
+            <section className="home">
                 <div className="textWrapper">
                     <div className="textContainer">
                         <div style={{ transform: `translateX(${width >= 780 ? scrollPos * 1500 : 0}px)` }}>
-                            <h1 className="aboutTitle">
-                                {t("about.hello")}
+                            <h1 className="homeTitle">
+                                {t("home.hello")}
                                 <br />
-                                {t("about.im.franco")}
+                                {t("home.im.franco")}
                             </h1>
-                            <p className="aboutText">
+                            <p className="homeText">
                                 <span>
-                                    {t("about.im.frontend.webdev")}
-                                    <br /> {t("about.focused.on")}&nbsp;
+                                    {t("home.im.frontend.webdev")}
+                                    <br /> {t("home.focused.on")}&nbsp;
                                 </span>
                                 <span className="movingLtrsSpan">
                                     {width < 780 ? (
-                                        <span className="funkySpan">{t("about.reactive")}</span>
+                                        <span className="funkySpan">{t("home.reactive")}</span>
                                     ) : (
-                                        <>{bouncingText(t("about.reactive"))}</>
+                                        <>{bouncingText(t("home.reactive"))}</>
                                     )}
                                 </span>
-                                <Trans i18nKey="myKey" defaults={t("about.aswell")} components={{ br: <br /> }} />
+                                <Trans i18nKey="myKey" defaults={t("home.aswell")} components={{ br: <br /> }} />
                             </p>
 
                             <div className="skillsetIcons">
-                                <SiHtml5 size={40} color="#f16528" className="aboutIcons" aria-label="HTML5 icon" />
-                                <SiCss3 size={40} color="#0096d1" className="aboutIcons" aria-label="CSS3 icon" />
+                                <SiHtml5 size={40} color="#f16528" className="homeIcons" aria-label="HTML5 icon" />
+                                <SiCss3 size={40} color="#0096d1" className="homeIcons" aria-label="CSS3 icon" />
                                 {/* prettier-ignore */}
-                                <SiJavascript size={40} color="#ceb200" className="aboutIcons" aria-label="JavaScript icon" />
+                                <SiJavascript size={40} color="#ceb200" className="homeIcons" aria-label="JavaScript icon" />
                                 {/* prettier-ignore */}
-                                <SiTypescript size={40} color="#0096d1" className="aboutIcons" aria-label="TypeScript icon" />
-                                <FaReact size={40} color="#5dddff" className="aboutIcons" aria-label="React icon" />
+                                <SiTypescript size={40} color="#0096d1" className="homeIcons" aria-label="TypeScript icon" />
+                                <FaReact size={40} color="#5dddff" className="homeIcons" aria-label="React icon" />
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const bouncingText = (word: string): React.ReactNode => {
             {wordSplit.map((l, index) => {
                 if ([" ", ","].includes(l)) {
                     return (
-                        <span key={index} className="aboutText" style={{ margin: 0 }}>
+                        <span key={index} className="homeText" style={{ margin: 0 }}>
                             {l === " " ? "\u00A0" : l}
                         </span>
                     );
@@ -76,4 +76,4 @@ const bouncingText = (word: string): React.ReactNode => {
     );
 };
 
-export default About;
+export default Home;

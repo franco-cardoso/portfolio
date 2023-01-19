@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import About from "../Components/About/About";
+import Home from "../Components/Home/Home";
 import useScrollPos from "../Components/Utility/useScrollPos";
 
 const RouteScroll = () => {
@@ -15,7 +15,7 @@ const RouteScroll = () => {
             transition={{ duration: 0.8 }}
             ref={containerRef}
         >
-            <About scrollPos={scrollPos} />
+            <Home scrollPos={scrollPos} />
         </motion.main>
     );
 };

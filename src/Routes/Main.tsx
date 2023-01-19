@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import About from "../Components/About/About";
 import Contact from "../Components/Contact/Contact";
 import { AnimatePresence } from "framer-motion";
 import R from "./Route";
