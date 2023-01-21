@@ -45,8 +45,8 @@ const Home = ({ scrollPos }: { scrollPos: number }) => {
                                 {/* prettier-ignore */}
                                 <SiTypescript size={40} color="#0096d1" className="homeIcons" aria-label="TypeScript icon" />
                                 <FaReact size={40} color="#5dddff" className="homeIcons" aria-label="React icon" />
-                                <SiVuedotjs size={40} color="#41B883" className="homeIcons" aria-label="React icon" />
-                                <SiNodedotjs size={40} color="#539E43" className="homeIcons" aria-label="React icon" />
+                                <SiVuedotjs size={40} color="#41B883" className="homeIcons" aria-label="Vue icon" />
+                                <SiNodedotjs size={40} color="#539E43" className="homeIcons" aria-label="Node icon" />
                             </div>
                         </div>
                     </div>
