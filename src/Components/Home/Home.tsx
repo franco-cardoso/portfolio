@@ -1,6 +1,6 @@
 import "./home.css";
 import { FaReact } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiCss3, SiHtml5, SiNodedotjs } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiCss3, SiHtml5, SiNodedotjs, SiVuedotjs } from "react-icons/si";
 import useWindowSize from "../Utility/useWindowSize";
 import Info from "./Info";
 import { Trans, useTranslation } from "react-i18next";
@@ -45,6 +45,7 @@ const Home = ({ scrollPos }: { scrollPos: number }) => {
                                 {/* prettier-ignore */}
                                 <SiTypescript size={40} color="#0096d1" className="homeIcons" aria-label="TypeScript icon" />
                                 <FaReact size={40} color="#5dddff" className="homeIcons" aria-label="React icon" />
+                                <SiVuedotjs size={40} color="#41B883" className="homeIcons" aria-label="React icon" />
                                 <SiNodedotjs size={40} color="#539E43" className="homeIcons" aria-label="React icon" />
                             </div>
                         </div>
