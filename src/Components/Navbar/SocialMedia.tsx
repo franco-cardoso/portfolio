@@ -6,12 +6,12 @@ const SocialMedia = () => {
     <Container>
       <IconWrapper href="/">
         <a href="https://github.com/franco-cardoso" rel="noreferrer" target={"_blank"}>
-          <FaGithub color="#e4e4e4" size={20} />
+          <FaGithub color="#e4e4e4" size={20} aria-label="Github icon" />
         </a>
       </IconWrapper>
       <IconWrapper href="/">
         <a href="https://www.linkedin.com/in/franco-cardoso-854442241/" rel="noreferrer" target={"_blank"}>
-          <FaLinkedinIn color="#e4e4e4" size={20} />
+          <FaLinkedinIn color="#e4e4e4" size={20} aria-label="LinkedIn icon" />
         </a>
       </IconWrapper>
     </Container>
