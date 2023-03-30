@@ -4,10 +4,11 @@ import Notification from "./Components/Misc/Notification";
 import Navbar from "./Components/Navbar/Navbar";
 import { TGlobalContext } from "./Components/Utility/types";
 import Main from "./Routes/Main";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
-ReactGA.initialize('G-TTVGR4FR9Q');
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize(process.env.REACT_APP_TRACKING_ID as string);
+ReactGA.send(window.location.pathname + window.location.search);
+
 
 const defaultValue = {
     sendNotif: () => {
