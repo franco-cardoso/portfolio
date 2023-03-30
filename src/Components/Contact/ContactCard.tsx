@@ -2,6 +2,7 @@ import "./contact.css";
 import { ReactNode, useContext } from "react";
 import { GlobalContext } from "../../App";
 import { useTranslation } from "react-i18next";
+import ReactGa from 'react-ga4'
 
 type PropTypes = {
     title: string;
@@ -19,6 +20,11 @@ const ContactCard = (props: PropTypes) => {
             onClick={() => {
                 navigator.clipboard.writeText(props.subtitle);
                 gContext.sendNotif(t("notif.clipboard"));
+                ReactGa.event({
+                    category: "contact",
+                    action: "contact card clicked",
+                    label: props.subtitle,
+                })
             }}
         >
             {props.icon}
