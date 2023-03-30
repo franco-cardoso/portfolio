@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <>
       {/* prettier-ignore */}
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
           <Routes key={location.pathname} location={location}>
             {/* <Route path="/" element={<R component={<About/>}/>}/> */}
             <Route path="/" element={<RouteScroll/>}/>
