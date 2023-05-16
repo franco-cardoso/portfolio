@@ -6,8 +6,10 @@ import { TGlobalContext } from "./Components/Utility/types";
 import Main from "./Routes/Main";
 import ReactGA from 'react-ga4';
 
+console.log(process.env.REACT_APP_TRACKING_ID as string)
 ReactGA.initialize(process.env.REACT_APP_TRACKING_ID as string);
 ReactGA.send(window.location.pathname + window.location.search);
+
 
 
 const defaultValue = {
