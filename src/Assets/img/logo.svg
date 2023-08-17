@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnssvg="http://www.w3.org/2000/svg">
+  <sodipodiNamedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     >
+    <inkscapeGrid
+       id="grid2"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="false" />
+  </sodipodiNamedview>
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <path
+       id="rect2"
+       style="stroke-width:18.1203"
+       d="M 60,0 V 60 H 0 Z"
+       />
+    <path
+       id="rect2-6"
+       style="stroke-width:18.1203"
+       d="M 60,120 V 60 h 60 z"
+       />
+    <path
+       id="rect2-6-6"
+       style="stroke-width:10.5616"
+       d="m 72.534949,12.504104 v 34.97174 h 34.971781 z" />
+    <path
+       id="rect2-6-6-0"
+       style="stroke-width:10.5616"
+       d="M 47.441262,107.5318 V 72.559972 h -34.97178 z" />
+  </g>
+</svg>

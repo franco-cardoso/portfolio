@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnssvg="http://www.w3.org/2000/svg">
+  <sodipodiNamedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25">
+    <inkscapeGrid
+       id="grid2"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodiNamedview>
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke-width:25.1613"
+       id="rect3"
+       width="84.852814"
+       height="84.852814"
+       x="42.426411"
+       y="-42.426407"
+       transform="rotate(45)" />
+    <path
+       id="rect2"
+       style="stroke-width:15.1003"
+       d="M 60,10 V 60 H 10 Z"
+       />
+    <path
+       id="rect2-6"
+       style="stroke-width:15.1003"
+       d="M 60,110 V 60 h 50 z"
+        />
+    <path
+       id="rect2-6-6"
+       style="stroke-width:8.80134"
+       d="M 70.445791,20.420087 V 49.563203 H 99.588942 Z" />
+    <path
+       id="rect2-6-6-0"
+       style="stroke-width:8.80134"
+       d="M 49.534385,99.609833 V 70.466643 H 20.391235 Z" />
+  </g>
+</svg>
